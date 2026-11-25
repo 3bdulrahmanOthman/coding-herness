@@ -226,3 +226,47 @@ Technical validation establishes Shipyard reuse boundaries, Grafeo behavior, IPC
 This document specifies the Engineering Intelligence plane, not the entirety of Coding Harness. The overall product also includes a Developer Workbench and an Operational Runtime. Their responsibilities, end-to-end user workflow, and the 22 logical intelligence domains are defined in [docs/13-platform-scope-and-intelligence-taxonomy.md](13-platform-scope-and-intelligence-taxonomy.md). The research questions and technology alternatives are tracked in [docs/14-research-and-decision-register.md](14-research-and-decision-register.md).
 
 The intelligence domains are logical capability boundaries. They do not imply one process, microservice, or autonomous agent per domain. Runtime process/session execution remains owned by the Operational Runtime; the intelligence sidecar supplies project understanding, knowledge, retrieval, reasoning support, and evidence services through versioned contracts.
+
+## 21. Cross-cutting intelligence mechanisms and graph views
+
+The following named concepts from the broader project discussions are explicit mechanisms/cross-cutting capabilities. They do not automatically add separate microservices, agents, or top-level taxonomy domains.
+
+### 21.1 Engineering Reasoning Intelligence
+
+A cross-domain reasoning capability combining repository, architecture, dependency/impact, knowledge, retrieval, planning, and verification evidence. It should support problem framing, hypothesis generation, root-cause investigation, alternative comparison, risk analysis, decision rationale, and iterative revision when new evidence appears. Reasoning outputs must distinguish facts, hypotheses, assumptions, and decisions and cite supporting evidence. It is not a substitute for deterministic checks.
+
+### 21.2 Capability Amplification Intelligence
+
+A cross-cutting layer that compensates for model/agent limitations through deterministic tools, project knowledge, retrieval, context engineering, specialist routing, capability-aware provider/harness selection, and independent verification. It should prefer deterministic evidence when available and explicitly expose unsupported capabilities rather than allowing an agent to pretend they exist.
+
+### 21.3 Cognitive scaffolding and knowledge injection
+
+- **Cognitive scaffolding:** externalize task state into structured goals, constraints, assumptions, dependencies, hypotheses, evidence, plans, acceptance criteria, and checklists so the model is not required to retain the entire problem in an opaque context window.
+- **Knowledge injection:** assemble and inject only the task-relevant, revision-aware context packet, project rules, accepted decisions, tool contracts, and specialist instructions into the selected agent/harness. Preserve provenance and disclose missing or conflicting evidence.
+- Context compaction/handoff must preserve critical constraints, accepted decisions, open questions, evidence references, and next actions; track context health and loss rather than assuming summaries are lossless.
+
+### 21.4 Expanded memory and learning mechanisms
+
+Project memory should account for:
+- **Procedural memory:** reusable, evidence-backed steps for recurring engineering tasks and workflows.
+- **Experience memory:** prior task outcomes, failures, diagnostics, remediation attempts, and what was verified to work.
+- **Distillation:** compress repeated task traces and evidence into reusable procedures or project knowledge while preserving provenance, scope, confidence, and links to original evidence.
+- **Teacher–student improvement:** optionally use a stronger model as a critic/evaluator or to propose distilled guidance for a smaller/cheaper model. This is an evaluation/knowledge-curation strategy, not an approved requirement to train or fine-tune models. No generated guidance becomes accepted policy without the relevant review/validation.
+- **Capability assessment:** maintain measured/declared capability profiles for models, providers, harnesses, tools, and specialists; route tasks according to demonstrated support, quality, latency, privacy, and resource constraints.
+
+### 21.5 Graph intelligence views
+
+Grafeo remains one graph engine. The logical views/queries may include:
+- Symbol and reference graph.
+- Import, package, and dependency graph.
+- Call graph where language/tool extraction is sufficiently reliable.
+- Data-flow graph where supported by language/compiler analysis; mark partial coverage and uncertainty.
+- Architecture/component/service graph.
+- Requirement–code–test traceability graph.
+- Change-impact graph linking changed entities to affected callers, consumers, contracts, tests, and architecture components.
+
+These are logical projections/query families over the approved knowledge model, not separate graph databases. Every edge must carry extractor/source provenance, revision scope, and confidence/coverage metadata. Do not imply complete call/data-flow coverage across all languages.
+
+### 21.6 Capability boundaries and validation status
+
+These mechanisms are target requirements to map into the 22-domain taxonomy and implementation backlog. Their exact algorithms, schemas, quality thresholds, and model usage remain research/implementation tasks. They are not claims of existing runtime functionality.
