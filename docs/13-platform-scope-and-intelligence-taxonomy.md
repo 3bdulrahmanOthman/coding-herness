@@ -187,3 +187,29 @@ Important additions preserved from prior discussions:
 Historical external references are not product commitments: DSH (DeepSeek Harness) and Sandcastle remain candidates for source/API validation; Codex and Claude Code are harness adapter targets to evaluate. “AOS” was used as a governance label without a confirmed full expansion and is not treated as a separate approved product or process.
 
 The September 2026 workspace/Spec Kit/skills/MCP workflow discussion is retained as a product requirement: preserve project-wide specifications and context, select only relevant procedures/tools, and avoid unnecessary token/context consumption. The early Next.js SaaS concept was exploratory; it does not freeze the current desktop/CLI stack or first-release surface.
+
+## 11. Crosswalk for previously named intelligence concepts
+
+The 22-domain taxonomy remains the canonical decomposition. Some names used in earlier discussions describe cross-cutting capabilities rather than additional independent domains:
+
+| Previously named concept | Canonical ownership / mapping |
+|---|---|
+| Engineering Reasoning Intelligence | Cross-domain capability combining Architecture (3), Dependency and Impact (4), Knowledge (6–7), Retrieval/Context (8–9), Planning (10), Collaboration/Review (12), and Verification (15) |
+| Capability Amplification Intelligence | Cross-domain capability combining Retrieval/Context (8–9), Tool/Action (13), Execution (14), Verification (15), Model/Provider (17), and Harness Interoperability (18) |
+| Change Impact Intelligence | Explicitly represented by Dependency and Impact Intelligence (4) |
+| Graph Intelligence | Shared graph-backed knowledge/query substrate, not a separate product plane or graph database; see graph views in docs/12 |
+| Cognitive Scaffolding | Structured task state, contracts, plans, hypotheses, evidence, acceptance criteria, and context-health mechanisms |
+| Knowledge Injection | Revision-aware context packet and contract delivery to selected agents/harnesses |
+| Procedural Memory | A governed memory category for reusable, evidence-backed procedures |
+| Experience Memory | A governed memory category for task outcomes, failures, and verified remediation |
+| Distillation | Provenance-preserving curation of repeated traces into reusable knowledge/procedures |
+| Teacher–Student Improvement | Optional evaluator/critic and guidance-distillation pattern; not a commitment to model training or fine-tuning |
+| Capability Assessment | Measured capability profiles for models, providers, harnesses, tools, and specialists |
+
+### 11.1 Graph projections are not separate stores
+
+Within the single approved Grafeo engine, the logical query views may include symbol/reference, import/dependency, call, data-flow, architecture/component, requirement–code–test traceability, and change-impact graphs. Extraction coverage depends on language/compiler tooling; incomplete or inferred relationships must be labeled with provenance, revision, and confidence.
+
+### 11.2 Preserve the full engineering lifecycle
+
+Engineering reasoning, capability amplification, cognitive scaffolding, knowledge injection, procedural/experience memory, distillation, and capability assessment connect the 22 domains. They should be mapped to contracts and backlog tasks rather than implemented as an unbounded set of autonomous agents or microservices.
