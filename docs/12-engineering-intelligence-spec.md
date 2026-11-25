@@ -219,3 +219,10 @@ Contracts must be typed, versioned, testable, and independent of a single model 
 ## 19. Implementation sequencing
 
 Technical validation establishes Shipyard reuse boundaries, Grafeo behavior, IPC/lifecycle, Graph Schema v1, and implementation issues before runtime implementation. The POC validates the accepted Grafeo choice; it does not authorize an automatic graph fallback. Implementation issues must trace back to this specification and implementation requirements.
+
+
+## 20. Relationship to the complete Coding Harness product
+
+This document specifies the Engineering Intelligence plane, not the entirety of Coding Harness. The overall product also includes a Developer Workbench and an Operational Runtime. Their responsibilities, end-to-end user workflow, and the 22 logical intelligence domains are defined in [docs/13-platform-scope-and-intelligence-taxonomy.md](13-platform-scope-and-intelligence-taxonomy.md). The research questions and technology alternatives are tracked in [docs/14-research-and-decision-register.md](14-research-and-decision-register.md).
+
+The intelligence domains are logical capability boundaries. They do not imply one process, microservice, or autonomous agent per domain. Runtime process/session execution remains owned by the Operational Runtime; the intelligence sidecar supplies project understanding, knowledge, retrieval, reasoning support, and evidence services through versioned contracts.
