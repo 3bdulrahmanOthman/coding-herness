@@ -171,3 +171,19 @@ The following are not frozen decisions and must not be described as implemented 
 - Do not promote generated guesses to accepted memory.
 - Do not report a task as complete without verifiable evidence.
 - Do not claim planned features are implemented.
+
+## 10. Autonomous execution and governance cross-cutting model
+
+The 22 intelligence domains above participate in an autonomous engineering lifecycle, but the lifecycle itself crosses all three product planes. See [Autonomous Engineering Execution and Governance](15-autonomous-engineering-execution-and-governance.md) for the detailed model.
+
+Important additions preserved from prior discussions:
+- A lead/orchestrator decomposes features into dependency-linked slices and dynamically assigns backend, frontend, data, test, review, security, or other specialists only when needed.
+- Specialists may delegate bounded nested tasks, while one parent remains accountable and global depth/concurrency/time/cost budgets apply.
+- Independent verification and review precede integration; failed checks enter bounded remediation/retest loops.
+- Branch/worktree isolation, PR/CI lifecycle, integration, and final acceptance are explicit stages, not assumptions supplied by an agent runtime.
+- A cross-cutting governance/policy plane enforces progressive governance, workflow selection, evidence-first transitions, approvals, permissions, context health, resource budgets, runtime identity, and recovery.
+- Skills, MCP, AGENTS.md, workflows, and harness adapters are composed based on task need. They are not interchangeable and none alone supplies the complete durable execution lifecycle.
+
+Historical external references are not product commitments: DSH (DeepSeek Harness) and Sandcastle remain candidates for source/API validation; Codex and Claude Code are harness adapter targets to evaluate. “AOS” was used as a governance label without a confirmed full expansion and is not treated as a separate approved product or process.
+
+The September 2026 workspace/Spec Kit/skills/MCP workflow discussion is retained as a product requirement: preserve project-wide specifications and context, select only relevant procedures/tools, and avoid unnecessary token/context consumption. The early Next.js SaaS concept was exploratory; it does not freeze the current desktop/CLI stack or first-release surface.
