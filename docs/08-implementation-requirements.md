@@ -121,3 +121,19 @@ Do not ship a capability as stable until:
 - telemetry/diagnostics are adequate;
 - failure modes are explicit;
 - performance is measured on representative workloads.
+
+## 12. Autonomous execution and governance
+
+Implement and test the contracts in [Autonomous Engineering Execution and Governance](15-autonomous-engineering-execution-and-governance.md):
+- versioned task/slice contracts and dependency DAG;
+- durable hierarchical delegation with bounded depth, concurrency, retries, time, and cost;
+- worktree/branch ownership and conflict detection;
+- workflow selection and progressive risk-based governance;
+- evidence-gated state transitions and independent verification;
+- approval and permission gates for consequential actions;
+- context health/compaction integrity across handoffs;
+- durable event/artifact lineage, safe resume, cancellation, and incident recovery;
+- SCM/PR/CI integration through explicit permission-aware adapters;
+- reproducible evaluation of coordination overhead, false-success, recovery, quality, and resource cost.
+
+Do not treat DSH, Sandcastle, or any harness as an approved dependency until its current source/API, license, security, platform, and capability fit have been validated. Do not invent an expansion for the historical AOS label.
