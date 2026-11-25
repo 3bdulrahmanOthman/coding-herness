@@ -115,3 +115,14 @@ Users can inspect plans, agent assignments, tool permissions, execution status, 
 ## 9. Reuse of operational orchestration
 
 Shipyard already documents durable runs, agent-to-agent orchestration, wait/send/check, handoff, review, broadcast, and flows. Evaluate these existing capabilities as potential operational primitives rather than reimplementing them automatically. The intelligence layer should add engineering context, task contracts, knowledge retrieval, specialist policy, and evidence validation where those are absent.
+
+## 10. Autonomous execution lifecycle and governance
+
+Use [Autonomous Engineering Execution and Governance](15-autonomous-engineering-execution-and-governance.md) as the detailed target lifecycle and contract reference. It extends this agent model with:
+- feature/task specifications and dependency-linked slices;
+- hierarchical lead/specialist/nested-specialist delegation;
+- isolated worktree ownership and explicit integration boundaries;
+- independent verification, remediation loops, review, PR/CI, and acceptance gates;
+- progressive governance, controlled workflow selection, evidence-first transitions, context health, bounded budgets, and recovery.
+
+These are platform requirements, not a mandate to run every stage or specialist for every task. The orchestrator selects the minimum sufficient workflow based on task risk and available capabilities.
