@@ -90,3 +90,16 @@ The roadmap is phased and evidence-driven. Dates and numeric performance commitm
 ## Prioritization rule
 
 Prioritize correctness, evidence, repository understanding, safe execution, retrieval quality, verification, and user control. Avoid marketplace breadth, speculative agent count, always-on intelligence services, and elaborate UI before the core end-to-end workflow is proven.
+
+## Cross-phase execution governance workstream
+
+This workstream applies across Phases 1–6 and is detailed in [Autonomous Engineering Execution and Governance](15-autonomous-engineering-execution-and-governance.md).
+
+- Phase 1: validate DSH/Sandcastle/Shipyard capabilities and compare reuse boundaries; define task contracts, state transitions, policy requirements, and evaluation baselines.
+- Phase 2: implement durable task/run state, event lineage, cancellation/recovery, worktree ownership, and minimum policy enforcement.
+- Phase 3: connect repository evidence, project specifications, architecture constraints, and context packets to task/slice contracts.
+- Phase 4: implement hierarchical orchestration, dynamic specialists, independent verification, bounded remediation, review, and SCM/CI workflows.
+- Phase 5: add governed learning, context-health metrics, workflow packages, capability attestation where justified, and extension governance.
+- Phase 6: harden production recovery, security, auditability, platform support, and optional remote/team execution.
+
+No phase requires all agents, stages, or integrations to run for every task. Workflow selection is risk- and capability-driven.
