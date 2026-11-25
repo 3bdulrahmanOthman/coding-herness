@@ -1,79 +1,92 @@
 # Roadmap
 
-The roadmap is phased and evidence-driven. Dates and numeric performance commitments are intentionally omitted until scope and baselines are validated.
+The roadmap is phased and evidence-driven. Dates and numeric performance commitments are intentionally omitted until scope and baselines are validated. The roadmap covers the whole Coding Harness product, not only Engineering Intelligence.
 
-## Phase 0 — Foundation (current)
+## Phase 0 — Product and architecture foundation (current)
 
-- Project vision, scope, principles, and product capabilities.
-- Architecture boundaries and ADRs.
-- Shipyard upstream assessment.
+- Product definition across Developer Workbench, Operational Runtime, Engineering Intelligence, and Unified Extensions.
+- Full intelligence-domain taxonomy and end-to-end workflow.
+- Architecture boundaries, accepted ADRs, and research register.
+- Shipyard upstream assessment and source-audit plan.
 - Grafeo sidecar integration requirements.
-- Security, testing, and resource requirements.
+- Security, testing, platform, and resource requirements.
 
-**Exit criteria:** architecture and open questions are understood; no runtime implementation assumptions are presented as proven.
+**Exit criteria:** product scope and ownership boundaries are documented; accepted decisions are separated from open research; planned capabilities are not presented as implemented.
 
-## Phase 1 — Technical validation
+## Phase 1 — Technical validation and research
 
-- Inspect Shipyard implementation and identify integration options.
-- Build a minimal Grafeo Rust POC.
-- Validate persistence, queries, recovery, memory controls, and supported desktop platforms.
-- Validate local IPC options and lifecycle supervision.
-- Define graph schema v1 and evidence model.
-- Establish representative benchmark datasets and baselines.
+- Complete Shipyard source/API/test/security/license/platform audit.
+- Build and benchmark a minimal Grafeo Rust POC.
+- Validate persistence, query behavior, recovery, resource use, backup/restore, and supported desktop platforms.
+- Select and test local IPC and sidecar lifecycle.
+- Define Graph Schema v1, provenance, memory lifecycle, and retrieval query catalog.
+- Research lexical/semantic/vector indexing placement and external memory integrations against actual workloads.
+- Establish model-provider and coding-harness capability matrices.
+- Establish representative datasets, baseline workflows, and evaluation methodology.
+- Resolve first-release surface and operational/runtime integration boundaries.
 
-**Exit criteria:** POC report, pinned Grafeo version, tested IPC/lifecycle proposal, and approved implementation plan.
+**Exit criteria:** reproducible validation reports, pinned Grafeo release/toolchain, tested IPC/lifecycle proposal, source-audited Shipyard reuse decision, and approved implementation backlog.
 
 ## Phase 2 — Core platform skeleton
 
-- Operational runtime adapter boundary.
-- Rust Intelligence Sidecar skeleton.
-- Versioned IPC contract and health lifecycle.
-- SQLite system-state schema.
+- Workbench/runtime/sidecar API boundaries.
+- Operational runtime integration adapter.
+- Rust Intelligence Sidecar skeleton and lifecycle supervision.
+- Versioned IPC contract, health, readiness, cancellation, and diagnostics.
+- SQLite system-state schema and migrations.
 - Grafeo database lifecycle and schema migration.
-- Basic repository discovery and index status.
+- Project/workspace registry, repository onboarding, and basic index status.
+- Minimum viable UI/CLI surface for project and runtime status.
 
-**Exit criteria:** app/runtime can start, monitor, and stop the sidecar; project/system state remains usable if intelligence is unavailable.
+**Exit criteria:** app/runtime can open a project and start/monitor/stop the sidecar; project/session/system state remains usable if intelligence is unavailable.
 
-## Phase 3 — Repository intelligence MVP
+## Phase 3 — Repository and project intelligence MVP
 
 - Git-aware incremental indexing.
 - File/module/symbol/dependency extraction for selected languages.
-- Evidence and provenance.
-- Graph query services.
+- Architecture and runtime/configuration inventory.
+- Evidence/provenance and governed knowledge lifecycle.
+- Graph query services and validated lexical retrieval.
 - Basic impact analysis and explainable retrieval.
-- Context packet generation with freshness indicators.
+- Context packet generation with freshness and token budgets.
 
-**Exit criteria:** evaluated retrieval and impact-analysis quality on representative repositories.
+**Exit criteria:** evaluated repository understanding, retrieval, and impact-analysis quality on representative repositories.
 
-## Phase 4 — Agent intelligence and verification
+## Phase 4 — Task, agent, execution, and verification intelligence
 
-- Orchestrator and specialist registry.
-- Task contracts and dynamic specialist selection.
-- Planning and bounded delegation.
-- Agent adapters for selected harnesses.
-- Verification plans and evidence-backed completion reports.
+- Task intake, clarification, planning, decomposition, and acceptance criteria.
+- Orchestrator and specialist capability registry.
+- Dynamic specialist selection, bounded delegation, and task contracts.
+- Agent/harness adapters for selected environments.
+- Deterministic tool registry and permission-aware execution.
+- Verification plans, independent review, and evidence-backed completion reports.
+- Workbench task timeline, diff/evidence review, and approval gates.
 
-**Exit criteria:** end-to-end engineering tasks demonstrate measurable improvement over a baseline workflow.
+**Exit criteria:** end-to-end engineering tasks demonstrate measurable improvement over a baseline workflow with no unsupported completion claims.
 
-## Phase 5 — Extensions and provider ecosystem
+## Phase 5 — Memory learning and extension/provider ecosystem
 
+- Memory correction, supersession, invalidation, expiry, and approval workflows.
+- Learning from review/test outcomes with policy governance.
 - Unified extension manifests and lifecycle.
-- MCP interoperability adapters.
-- Model/provider adapters.
-- Skills, agent packages, and workflow packages.
-- Permission review and package integrity.
+- MCP interoperability adapters and native tool exposure.
+- Model/provider adapters and policy-aware routing.
+- Skills, agent packages, workflow packages, parser/indexer extensions, harness adapters, and UI plugins.
+- Permission review, package integrity, and sandboxing.
 
-**Exit criteria:** third-party capability integration is manageable, auditable, and secure.
+**Exit criteria:** integrations are compatible, auditable, secure, and do not become prerequisites for core capabilities.
 
-## Phase 6 — Productization
+## Phase 6 — Productization and advanced collaboration
 
 - Desktop experience and CLI/API polish.
-- Multi-project workflows and team policies.
-- Packaging, signing, updates, backups, diagnostics, and support.
+- Multi-project workflows, diagnostics, updates, recovery, and packaging.
+- Resource budgets, performance tuning, and reproducible evaluation.
+- Optional remote execution, team policies, synchronization, and shared knowledge research.
 - Optional mobile companion exploration.
+- Extension catalog/marketplace only after core governance and security are proven.
 
-**Exit criteria:** supported platform releases meet reliability, security, and usability requirements.
+**Exit criteria:** supported releases meet reliability, security, usability, and resource targets established by evidence.
 
 ## Prioritization rule
 
-Prioritize work that improves correctness, evidence, retrieval quality, safety, and measurable engineering outcomes. Avoid building marketplace breadth, speculative agents, or elaborate UI before core indexing and verification are proven.
+Prioritize correctness, evidence, repository understanding, safe execution, retrieval quality, verification, and user control. Avoid marketplace breadth, speculative agent count, always-on intelligence services, and elaborate UI before the core end-to-end workflow is proven.
