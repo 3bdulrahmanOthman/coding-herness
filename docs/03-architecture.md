@@ -126,3 +126,9 @@ Do not assume a desktop binary can be reused unchanged on iOS or Android. Mobile
 - No distributed microservices by default.
 - No direct model-provider calls scattered throughout core domain logic.
 - No graph-engine abstraction designed to support unselected alternatives; isolate Grafeo behind a maintainable internal repository/service boundary without building a multi-engine framework.
+
+## 11. Autonomous engineering execution and governance
+
+The end-to-end execution lifecycle, hierarchical delegation contracts, governance/policy plane, evidence-gated transitions, context health, bounded retries, recovery, and external runtime evaluation are specified in [Autonomous Engineering Execution and Governance](15-autonomous-engineering-execution-and-governance.md).
+
+The Workbench, Operational Runtime, Engineering Intelligence, harness adapters, SCM integration, and governance services retain distinct ownership. The orchestrator coordinates these boundaries; it does not replace durable runtime state, deterministic verification, or policy enforcement.
