@@ -68,3 +68,7 @@ See the ADRs for rationale, consequences, and validation requirements.
 ## License and ownership
 
 No license is declared by this foundation. A license and contribution policy must be selected deliberately before external contributions or redistribution are invited.
+
+- [Autonomous Engineering Execution and Governance](docs/15-autonomous-engineering-execution-and-governance.md)
+
+The product scope includes three cooperating planes—Developer Workbench, Operational Runtime, and Engineering Intelligence—plus a unified extensions ecosystem. The intelligence taxonomy defines 22 logical domains. The execution-governance specification covers hierarchical agents, durable workflows, evidence gates, approvals, isolation, recovery, and end-to-end acceptance.
