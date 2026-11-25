@@ -1,12 +1,12 @@
 # Coding Harness
 
-**An Engineering Intelligence Augmentation Platform for AI-assisted software engineering.**
+**A developer workbench and agent-engineering platform combining Operational Runtime, Engineering Intelligence, and a unified extensions ecosystem.**
 
-Coding Harness aims to make coding agents more effective at real software engineering work: understanding unfamiliar repositories, reasoning over architecture and dependencies, planning changes, coordinating specialist agents, executing work safely, verifying outcomes, and retaining useful engineering knowledge across sessions.
+Coding Harness aims to make serious software engineering workflows more reliable across coding agents, models, providers, and repositories. It combines project/workspace/session execution capabilities, a developer-facing workbench, and a modular intelligence system for project understanding, memory, retrieval, planning, orchestration, deterministic tools, verification, and learning.
 
-It is intended to be model-, provider-, and harness-agnostic. It is not another model, a prompt collection, or merely a workflow wrapper.
+It is not merely an Engineering Intelligence library, a prompt/skill bundle, an MCP collection, or a wrapper around one model or coding harness.
 
-> **Project status:** Foundation and architecture definition. Runtime implementation has not started. Architecture decisions are recorded separately from implementation details that still require proof-of-concept validation.
+> **Project status:** Product foundation, architecture, and validation planning. Runtime implementation has not started. Planned capabilities are not implemented or validated unless a later implementation record says so.
 
 ## Start here
 
@@ -15,6 +15,8 @@ It is intended to be model-, provider-, and harness-agnostic. It is not another 
 - [System architecture](docs/03-architecture.md)
 - [Engineering intelligence and knowledge](docs/04-intelligence-and-knowledge.md)
 - [Complete Engineering Intelligence specification](docs/12-engineering-intelligence-spec.md)
+- [Product scope and 22-domain intelligence taxonomy](docs/13-platform-scope-and-intelligence-taxonomy.md)
+- [Research and decision register](docs/14-research-and-decision-register.md)
 - [Agents and orchestration](docs/05-agents-and-orchestration.md)
 - [Unified extensions ecosystem](docs/06-extensions-ecosystem.md)
 - [Security and trust](docs/07-security.md)
@@ -23,6 +25,17 @@ It is intended to be model-, provider-, and harness-agnostic. It is not another 
 - [Open technical questions](docs/11-open-questions.md)
 - [Shipyard upstream assessment](docs/10-shipyard-assessment.md)
 - [Architecture decision records](docs/adr/README.md)
+
+## Product planes
+
+| Plane | Responsibility |
+|---|---|
+| Developer Workbench | Project/workspace UX, sessions, plans, agent activity, diffs, evidence, permissions, settings, diagnostics |
+| Operational Runtime | Projects, worktrees, sessions, terminals, agent processes, tasks/runs, hooks/flows, remote execution where supported |
+| Engineering Intelligence | Repository/code/architecture understanding, knowledge/memory, retrieval/context, planning, specialist selection, tools, verification, learning |
+| Unified Extensions Ecosystem | Typed integrations for tools, MCP, skills, agents, workflows, intelligence/memory/model providers, harness adapters, parsers, and UI plugins |
+
+The intelligence taxonomy is a set of logical capability domains, not a requirement for separate microservices or always-running agents.
 
 ## Approved architecture decisions
 
@@ -35,7 +48,7 @@ It is intended to be model-, provider-, and harness-agnostic. It is not another 
 | Intelligence execution | Hybrid: deterministic native capabilities plus model-based reasoning |
 | Extensions | Unified extensions ecosystem |
 | Agent topology | Orchestrator with dynamically selected specialist agents |
-| Operational foundation | Evaluate and reuse suitable Shipyard concepts/components; no assumption of a fork or mandatory dependency |
+| Operational foundation | Evaluate and reuse suitable original Shipyard capabilities; no assumption of a fork or mandatory dependency |
 
 See the ADRs for rationale, consequences, and validation requirements.
 
@@ -49,10 +62,8 @@ See the ADRs for rationale, consequences, and validation requirements.
 6. Incremental work and retrieval rather than indiscriminate context loading.
 7. Verification is part of execution, not an optional final prompt.
 8. Fail visibly and safely; do not silently substitute a different graph engine.
-
-## Current scope
-
-The initial project phase is architecture, contracts, requirements, and validation planning. It does not claim that the runtime, sidecar, graph schema, UI, or provider integrations already exist.
+9. Core capabilities must not require paid/cloud AI or third-party MCPs.
+10. Do not duplicate mature operational runtime features before auditing Shipyard.
 
 ## License and ownership
 
