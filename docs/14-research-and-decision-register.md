@@ -134,3 +134,45 @@ Each result must be labeled one of:
 - **Superseded:** replaced by a later decision.
 
 A research result does not silently change an accepted ADR. A technical blocker must be presented with evidence for an explicit product decision.
+
+## 10. Autonomous execution and governance research
+
+Prior discussions explored a target system that can coordinate a complete feature lifecycle, not merely spawn subagents. The required investigation is captured in [Autonomous Engineering Execution and Governance](15-autonomous-engineering-execution-and-governance.md).
+
+### 10.1 External runtime and orchestration candidates
+
+- **DeepSeek Harness (DSH):** prior discussion described Subagent/Workflow primitives (parallel, pipeline, phase, nested delegation, lifecycle controls, JavaScript customization). Verify exact upstream release and API. Do not assume durable resume, worktree isolation, retry/recovery, independent review gates, GitHub PR/CI lifecycle, or global budgets are complete.
+- **Sandcastle:** previously discussed as a TypeScript orchestration library for isolated agent runs, branches/worktrees, parallel tasks, testing/review, retries, and merge workflows. Treat as a candidate, not a dependency or accepted architecture decision.
+- **Shipyard:** separate operational foundation candidate already covered by the source-audit issue; avoid conflating its process/workspace lifecycle with engineering intelligence.
+- **Codex and Claude Code:** evaluate as harness adapters with capability discovery, not as equivalent runtimes.
+
+### 10.2 Governance and workflow concepts carried forward
+
+The following concepts appeared in earlier agent-operating-model discussions and should be evaluated as Coding Harness requirements:
+- Progressive Governance and risk-tiered approval.
+- Controlled Workflow Selection instead of one fixed pipeline.
+- Evidence-first stage transitions and explicit acceptance invariants.
+- Context Health/Compaction and preservation of critical context across handoffs.
+- Checkpoints only where interruption/recovery needs justify them.
+- A central policy plane for permissions, identity, budgets, data movement, and approvals.
+- Runtime identity/attestation where feasible.
+- Telemetry, detection, incident recovery, and production-readiness gates.
+
+These concepts are target requirements for design/validation, not claims that an existing AOS implementation or separate product is part of this repository. “AOS” had no confirmed full expansion in the prior discussion.
+
+### 10.3 Product/workflow history and status
+
+- The early medium-sized Next.js SaaS/workspace concept with Skills, MCP, and project-wide Spec Kit tracking was exploratory; it does not establish the final product stack or first-release surface.
+- The user emphasized composing existing ESM/skills/MCP/AGENTS.md and project workflows rather than adding a separate Harness skill or duplicating capabilities blindly.
+- A core goal is to reduce agent wandering and token waste through scoped context, targeted research, workflow selection, budgets, and explicit stop/retry/handoff behavior.
+- Preserve project specifications, architecture decisions, task plans, acceptance criteria, and evidence as linked/versioned artifacts.
+- Skills are reusable procedures; MCP is tool interoperability; workflows are orchestration patterns; runtime is durable execution; governance decides whether transitions are allowed.
+
+### 10.4 Required research outputs
+
+- Current-source capability matrix and integration spike for DSH/Sandcastle/selected harnesses.
+- Task/slice contract and state-machine schema with durable event model.
+- Worktree ownership, nested delegation, retry, cancellation, and recovery tests.
+- Risk-tiered policy/approval matrix and evidence-gate test suite.
+- Context-health/compaction evaluation and token/cost budget methodology.
+- End-to-end baseline tasks measuring quality, coordination overhead, false-success, recovery, and resource consumption.
