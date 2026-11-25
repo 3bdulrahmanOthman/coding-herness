@@ -19,6 +19,7 @@ It is intended to be model-, provider-, and harness-agnostic. It is not another 
 - [Security and trust](docs/07-security.md)
 - [Implementation requirements](docs/08-implementation-requirements.md)
 - [Roadmap](docs/09-roadmap.md)
+- [Open technical questions](docs/11-open-questions.md)
 - [Shipyard upstream assessment](docs/10-shipyard-assessment.md)
 - [Architecture decision records](docs/adr/README.md)
 
