@@ -14,6 +14,7 @@ It is intended to be model-, provider-, and harness-agnostic. It is not another 
 - [Product capabilities](docs/02-product.md)
 - [System architecture](docs/03-architecture.md)
 - [Engineering intelligence and knowledge](docs/04-intelligence-and-knowledge.md)
+- [Complete Engineering Intelligence specification](docs/12-engineering-intelligence-spec.md)
 - [Agents and orchestration](docs/05-agents-and-orchestration.md)
 - [Unified extensions ecosystem](docs/06-extensions-ecosystem.md)
 - [Security and trust](docs/07-security.md)
