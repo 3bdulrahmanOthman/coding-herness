@@ -72,3 +72,10 @@ No license is declared by this foundation. A license and contribution policy mus
 - [Autonomous Engineering Execution and Governance](docs/15-autonomous-engineering-execution-and-governance.md)
 
 The product scope includes three cooperating planes—Developer Workbench, Operational Runtime, and Engineering Intelligence—plus a unified extensions ecosystem. The intelligence taxonomy defines 22 logical domains. The execution-governance specification covers hierarchical agents, durable workflows, evidence gates, approvals, isolation, recovery, and end-to-end acceptance.
+
+
+## Upstream integration plan
+
+- [Shipyard foundation, AgenticOS capability adoption, and workbench integration](docs/16-shipyard-agenticos-integration-plan.md)
+
+Shipyard remains the operational/workbench foundation. AgenticOS contributes selected patterns and capabilities; its multi-tenant server backend is not imported. A Windows desktop edition is an explicit product target and requires its own porting, packaging, IPC, sidecar, update, and recovery validation. The existing Shipyard UI language is preserved and extended.
