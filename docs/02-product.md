@@ -100,3 +100,10 @@ A coherent ecosystem covers Native Tools, MCP Servers/Adapters, Skills, Agent Pa
 ## Requirements quality
 
 Every major capability should have a user problem, intended outcome, functional and non-functional requirements, permission/trust implications, failure modes, acceptance criteria, observable metrics, dependencies, and rollout plan.
+
+
+## Upstream capability integration
+
+Shipyard is the selected operational/workbench foundation. Preserve and evolve its existing project, worktree, session, terminal, agent, hook/flow, automation, plugin, and desktop capabilities where source audit confirms suitability. AgenticOS contributes selected patterns: versioned Agent Specs, Skills/Context, governed Memory integration, visual workflow authoring, Routines, structured tables, approvals, budgets, audit, delegation, and interactive Apps. Do not import its complete multi-tenant Python/FastAPI/PostgreSQL backend. See [integration plan](16-shipyard-agenticos-integration-plan.md).
+
+Engineering Memory and Code Intelligence are first-class domains inside Engineering Intelligence, not separate products or duplicate stores. A Windows desktop edition is an explicit product target; upstream Tauri usage is not treated as proof of Windows readiness. Preserve Shipyard's current UI language and extend it consistently.
