@@ -48,3 +48,18 @@ A future catalog/marketplace may support discovery, publisher identity, compatib
 ## 7. Governance
 
 Define package trust levels, review requirements, security scanning, provenance, vulnerability reporting, and emergency revocation before enabling third-party execution at scale.
+
+
+## 8. Execution tiers and capability governance
+
+The unified ecosystem uses one catalog, manifest, permission model, compatibility policy, and lifecycle while supporting different execution tiers:
+
+1. Native trusted capabilities bundled with the app for core deterministic functionality.
+2. Sandboxed/WASM extensions where the required host API fits a capability-scoped WASM interface.
+3. Isolated local processes over versioned IPC for native libraries, OS integration, or independent lifecycle.
+4. Remote/MCP services with explicit network, credential, data-egress, and approval policy.
+5. UI plugins with declarative contribution points and no implicit backend privileges.
+
+Manifests declare tier, capabilities, permissions, entry point, platform/runtime compatibility, dependencies, resource limits, secrets, network access, integrity metadata, and publisher provenance. Install/update/rollback/revocation and audit are governed. MCP remains an interoperability mechanism, not the internal architecture.
+
+AgenticOS-inspired Skills, Context, versioned Agent Specs, Workflow Specs, approvals, budgets, and audit are integrated into this ecosystem. See [integration plan](16-shipyard-agenticos-integration-plan.md) for contracts and validation gates.
