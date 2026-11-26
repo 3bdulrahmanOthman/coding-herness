@@ -103,3 +103,14 @@ This workstream applies across Phases 1–6 and is detailed in [Autonomous Engin
 - Phase 6: harden production recovery, security, auditability, platform support, and optional remote/team execution.
 
 No phase requires all agents, stages, or integrations to run for every task. Workflow selection is risk- and capability-driven.
+
+
+## Cross-cutting upstream integration work
+
+- Keep Shipyard as the operational/workbench foundation and complete its source/API/security/platform audit before reuse decisions.
+- Adopt selected AgenticOS patterns through native contracts: versioned Agent Specs, Skills/Context, unified Engineering Memory, one workflow substrate with visual authoring and Routines, Virtual Tables, approvals, budgets, audit, and sandboxed Apps/artifacts.
+- Avoid a second workflow executor: migrate/bridge existing Shipyard flows and new visual/routine definitions to one canonical Workflow Spec and durable run model.
+- Implement the unified extension execution tiers (native, WASM where suitable, isolated process, remote/MCP, and UI extension) behind one manifest and governance system.
+- Deliver a Windows desktop edition as an explicit target with clean-install, signing, process/terminal, IPC, Rust sidecar/Grafeo, update, and recovery gates. Preserve the Shipyard UI language.
+
+See [Shipyard and AgenticOS integration plan](16-shipyard-agenticos-integration-plan.md).
