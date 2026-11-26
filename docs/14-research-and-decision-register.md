@@ -176,3 +176,20 @@ These concepts are target requirements for design/validation, not claims that an
 - Risk-tiered policy/approval matrix and evidence-gate test suite.
 - Context-health/compaction evaluation and token/cost budget methodology.
 - End-to-end baseline tasks measuring quality, coordination overhead, false-success, recovery, and resource consumption.
+
+
+## 7. Additional accepted product direction: Shipyard + AgenticOS
+
+| Area | Direction | Remaining validation |
+|---|---|---|
+| Product foundation | Shipyard is the operational/workbench foundation | Source-level audit and selective reuse decisions |
+| AgenticOS | Adopt selected patterns/capabilities; do not import its full server backend | Feature-by-feature source audit and provenance |
+| Engineering Memory / Code Intelligence | First-class domains within Engineering Intelligence | Implement through the approved knowledge and indexing architecture; no parallel subsystem |
+| Workflow architecture | One canonical Workflow Spec and one durable execution substrate | Audit Shipyard flows; validate pause/resume, triggers, approvals, retries, migration |
+| Agent definitions | Versioned, schema-validated Agent Specs with capability, permission, budget, and test metadata | Contract and compatibility tests |
+| Extensions | Unified ecosystem with native, WASM, isolated-process, remote/MCP, and UI tiers | WASM host API, sandbox, threat model, compatibility and packaging POC |
+| Desktop target | Windows edition is explicitly required; macOS/Linux remain platform targets | Clean-install packaging, signing, terminal/process behavior, IPC, sidecar, updates, recovery |
+| UI direction | Preserve Shipyard's visual language and extend it | Design-token inventory and screenshot/accessibility regression |
+| Languages | Go operational runtime where validated; Rust intelligence sidecar; TypeScript/React workbench | Benchmark and upstream compatibility audit |
+
+The detailed decision and implementation contract is [16-shipyard-agenticos-integration-plan.md](16-shipyard-agenticos-integration-plan.md). These decisions do not imply implementation is complete.
