@@ -132,3 +132,12 @@ Do not assume a desktop binary can be reused unchanged on iOS or Android. Mobile
 The end-to-end execution lifecycle, hierarchical delegation contracts, governance/policy plane, evidence-gated transitions, context health, bounded retries, recovery, and external runtime evaluation are specified in [Autonomous Engineering Execution and Governance](15-autonomous-engineering-execution-and-governance.md).
 
 The Workbench, Operational Runtime, Engineering Intelligence, harness adapters, SCM integration, and governance services retain distinct ownership. The orchestrator coordinates these boundaries; it does not replace durable runtime state, deterministic verification, or policy enforcement.
+
+
+## 10. Shipyard and AgenticOS integration boundary
+
+Shipyard remains the operational/workbench foundation; AgenticOS is a capability and design-pattern reference. Adopt selected AgenticOS patterns through native contracts and existing product planes; do not import its full server backend. The detailed capability matrix, workflow architecture, Agent/Workflow Specs, extension tiers, language boundaries, Windows target, and UI integration rules are defined in [16-shipyard-agenticos-integration-plan.md](16-shipyard-agenticos-integration-plan.md).
+
+Use one canonical versioned Workflow Spec and one durable execution substrate. Existing Shipyard hooks/flows, visual workflow authoring, Routines, CLI/API, and event triggers are adapters/surfaces over that model—not independent competing workflow engines. The visual canvas is an authoring interface, not a second executor.
+
+A Windows desktop edition is an explicit product target. Keep Go for validated operational runtime responsibilities, Rust for the Intelligence Sidecar/Grafeo and measured native workloads, and TypeScript/React for the existing workbench. Preserve and extend the Shipyard UI rather than replacing it.
