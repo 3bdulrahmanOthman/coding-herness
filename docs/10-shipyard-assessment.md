@@ -99,3 +99,12 @@ Then write a reuse decision comparing:
 - independent operational implementation only for genuine gaps.
 
 Do not call the current documentation inspection a full source audit.
+
+
+## 6. AgenticOS comparison and product direction
+
+Shipyard remains the chosen foundation for operational runtime and workbench UX. AgenticOS is not a replacement foundation; it is a reference for selected higher-level capabilities: versioned agent definitions, capability-based configuration, Skills/Context, Routines, visual workflows, approvals, budgets, audit, delegation, structured tables, and interactive Apps. Its full multi-tenant Python/FastAPI/PostgreSQL backend is not part of the target architecture.
+
+The product will preserve Shipyard's current UI language and extend its navigation and surfaces. A Windows desktop edition is a committed product target, but current upstream Tauri usage does not prove Windows readiness; a dedicated porting and release validation track is required.
+
+See [16-shipyard-agenticos-integration-plan.md](16-shipyard-agenticos-integration-plan.md) for the capability matrix, one-engine workflow decision, extension tiers, language boundaries, and validation plan.
