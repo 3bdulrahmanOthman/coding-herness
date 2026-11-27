@@ -78,7 +78,7 @@ The roadmap is phased and evidence-driven. Dates and numeric performance commitm
 
 ## Phase 6 — Productization and advanced collaboration
 
-- Desktop experience and CLI/API polish.
+- Production desktop experience and CLI/API polish, building on the earlier Windows vertical slice.
 - Multi-project workflows, diagnostics, updates, recovery, and packaging.
 - Resource budgets, performance tuning, and reproducible evaluation.
 - Optional remote execution, team policies, synchronization, and shared knowledge research.
@@ -96,7 +96,7 @@ Prioritize correctness, evidence, repository understanding, safe execution, retr
 This workstream applies across Phases 1–6 and is detailed in [Autonomous Engineering Execution and Governance](15-autonomous-engineering-execution-and-governance.md).
 
 - Phase 1: validate DSH/Sandcastle/Shipyard capabilities and compare reuse boundaries; define task contracts, state transitions, policy requirements, and evaluation baselines.
-- Phase 2: implement durable task/run state, event lineage, cancellation/recovery, worktree ownership, and minimum policy enforcement.
+- Phase 2: implement durable task/run state, event lineage, cancellation/recovery, worktree ownership, minimum policy enforcement, and a Windows desktop vertical slice that proves the Go runtime + Rust/Grafeo sidecar + IPC packaging path. Full supported Windows release hardening remains a productization gate.
 - Phase 3: connect repository evidence, project specifications, architecture constraints, and context packets to task/slice contracts.
 - Phase 4: implement hierarchical orchestration, dynamic specialists, independent verification, bounded remediation, review, and SCM/CI workflows.
 - Phase 5: add governed learning, context-health metrics, workflow packages, capability attestation where justified, and extension governance.
