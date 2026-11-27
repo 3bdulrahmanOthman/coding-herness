@@ -9,7 +9,7 @@
 | Graph engine | Grafeo is the sole graph engine | Pin exact release/toolchain; validate API, persistence, query behavior, memory, concurrency, recovery, backup/restore, and platforms |
 | Graph integration | Native Rust API inside a Rust Intelligence Sidecar | POC, packaging, lifecycle, IPC, supervision |
 | Graph fallback | None | Define visible degraded/unavailable behavior |
-| System state | SQLite only for application/system state | Schema, migrations, backup, ownership |
+| System state | SQLite for application/system state; it may back Operational Runtime-owned task/run metadata if validated by the Shipyard/runtime audit | Schema, migrations, backup, ownership |
 | Intelligence execution | Hybrid deterministic + model-based | Capability routing, evaluation, failure behavior |
 | Extensions | Unified Extensions Ecosystem | Manifest, permissions, lifecycle, compatibility, sandboxing |
 | Agent topology | Orchestrator with dynamically selected specialists | Capability registry, contracts, bounded delegation, evaluation |
