@@ -61,8 +61,8 @@ These questions are intentionally separated from accepted architecture decisions
 
 ## H. Product and platform
 
-1. Is the first usable surface desktop, CLI, or both?
-2. Which operating systems and architectures are release blockers for v1?
+1. What is the exact first-release desktop feature/package scope, and which CLI capabilities ship alongside it?
+2. Which Windows versions/architectures are release blockers for v1, and which macOS/Linux targets are supported?
 3. What is the minimum viable UI for reviewing evidence, plans, permissions, and agent work?
 4. What team-sharing and synchronization needs are in scope for the first release?
 
