@@ -9,7 +9,7 @@ The platform needs lightweight durable transactional state in addition to its gr
 
 ## Decision
 
-Use SQLite for application/system state such as configuration, project registry, job metadata, preferences, and migration bookkeeping. Use Grafeo for the engineering knowledge graph.
+Use SQLite for application/system state such as configuration, project registry, preferences, and migration bookkeeping. The Operational Runtime may use SQLite for its own durable task/run metadata if that matches its audited design; runtime ownership and schema boundaries must remain explicit. Use Grafeo for the engineering knowledge graph only.
 
 SQLite is not a graph fallback and must not be combined with petgraph as an alternative graph engine.
 
