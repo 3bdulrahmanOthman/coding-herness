@@ -95,7 +95,7 @@ Memory is a governed knowledge lifecycle, not a transcript dump.
 
 ### Storage boundaries
 - Grafeo is the sole graph engine, owned by the Rust Intelligence Sidecar. No graph fallback.
-- SQLite stores application/system state only (project registry, settings, local preferences, extension registry metadata, and migration bookkeeping); it is not a graph fallback. Durable operational task/run state belongs to the Operational Runtime's authoritative store, not to Engineering Memory or Grafeo.
+- SQLite stores application/system state and may back runtime-owned transactional metadata where appropriate; it is not a graph fallback. Durable operational task/run state is owned by the Operational Runtime (which may use an approved persistence backend), not by Engineering Memory or Grafeo.
 - Source repositories and Git remain authoritative. Derived graph/index/memory records must be rebuildable where possible.
 - Store large raw artifacts as files/object artifacts with stable references and hashes, not wholesale graph properties.
 
