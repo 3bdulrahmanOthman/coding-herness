@@ -1,6 +1,6 @@
-# ADR-008: Evaluate Shipyard as an Operational Foundation
+# ADR-008: Shipyard as the Operational and Workbench Foundation
 
-- Status: **Accepted direction; reuse mechanism open**
+- Status: **Accepted product direction; per-capability reuse mechanism open**
 - Date: 2026-11-25
 
 ## Context
@@ -11,13 +11,13 @@ Rebuilding these capabilities would duplicate mature work and expand scope.
 
 ## Decision
 
-Evaluate the original upstream Shipyard as a candidate operational foundation and reuse suitable capabilities through supported interfaces or carefully chosen integration seams.
+Use the original upstream Shipyard as the selected operational and desktop-workbench foundation for Coding Harness. Reuse suitable capabilities through supported interfaces or carefully chosen integration seams. The product foundation is accepted; the method used for each capability (API, plugin/adapter, selective source reuse, or replacement where unsuitable) remains open until the source-level audit.
 
-Coding Harness is not assumed to be a fork, and no direct source dependency or code copy is approved by this ADR.
+Coding Harness is not assumed to be a fork. This ADR does not approve wholesale source copying or a mandatory direct source dependency.
 
 ## Consequences
 
 - Inspect actual source, APIs, lifecycle, security, licensing, tests, and release packaging before selecting an integration method.
 - Keep the Rust Intelligence Sidecar and its Grafeo ownership as a distinct intelligence boundary.
 - Avoid duplicating existing operational orchestration where it meets requirements.
-- Record the final reuse/integration decision in a follow-up ADR after source-level audit.
+- Record per-capability reuse/integration decisions in a follow-up ADR after source-level audit.
