@@ -5,7 +5,7 @@
 Coding Harness is composed of a developer-facing workbench, an operational execution runtime, and a modular Engineering Intelligence system. These are product/ownership boundaries; they do not mandate one process per capability.
 
 ```text
-Developer Workbench (desktop / CLI / API — first-release mix open)
+Developer Workbench (desktop-first; Windows target; exact first-release feature/package scope open)
         |                         |
         v                         v
 Operational Runtime  <---->  Engineering Intelligence API
@@ -22,14 +22,15 @@ Operational Runtime  <---->  Engineering Intelligence API
         |                          +----------+
         |                                     |
         v                                     v
-  Operational state                         Grafeo
-  and event journal                      graph knowledge
-                                           (sole graph engine)
+  Operational Runtime owns                Grafeo
+  task/run state and events             graph knowledge
+  (persistence backend TBD)              (sole graph engine)
         |
         v
-      SQLite
-  application/system state only
-  (not graph fallback)
+  Optional SQLite persistence
+  for runtime-owned metadata only
+  where validated; also app/system state
+  (never a graph fallback)
 ```
 
 This is a target architecture, not a claim that processes or interfaces already exist.
