@@ -138,7 +138,7 @@ Evaluation should measure task success, acceptance-gate correctness, regression/
 
 ## 10. Open decisions and validation
 
-- Whether DSH, Sandcastle, Shipyard, or another runtime is reused, and at which boundary.
+- Whether DSH, Sandcastle, or another external orchestration/runtime component is reused, and at which boundary. Shipyard remains the selected operational/workbench foundation; only its per-capability integration/reuse mechanisms remain open.
 - Exact workflow/state-machine schema and durable event model.
 - Exact worktree isolation and nested delegation policy.
 - Which SCM/CI providers are first-class and what permissions they require.
