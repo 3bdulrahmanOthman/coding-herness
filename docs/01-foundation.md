@@ -73,7 +73,7 @@ The initial platform is not intended to:
 - execute arbitrary repository instructions without trust and permission checks;
 - require cloud infrastructure or paid AI for core deterministic capabilities;
 - become a generic no-code automation platform;
-- fork Shipyard or copy its source code as an assumed starting point;
+- blindly fork the upstream Shipyard repository, vendor its code wholesale, or make an unreviewed direct source dependency; Shipyard is the selected foundation, while the repository strategy and per-capability integration method must follow the source, license, security, and maintenance audit;
 - turn every intelligence domain into a separate microservice or always-running agent;
 - assume mobile parity with desktop.
 
