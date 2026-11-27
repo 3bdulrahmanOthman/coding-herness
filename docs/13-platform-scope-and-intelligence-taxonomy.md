@@ -29,7 +29,7 @@ Target responsibilities:
 - Project intelligence views: architecture map, dependency/impact exploration, knowledge/evidence browser, and memory/decision review.
 - Global settings, model/provider policy, resource budgets, privacy controls, logs, diagnostics, updates, and recovery guidance.
 
-The initial surface (desktop, CLI, or both) remains an explicit product decision. Tauri 2 + React + TypeScript is a candidate desktop stack inherited from the Shipyard evaluation context, not a frozen decision. Do not claim mobile parity; a mobile companion is a later exploration only.
+The approved product direction is a Shipyard-derived desktop workbench, with Windows explicitly required and macOS/Linux as additional desktop targets to validate. Preserve the upstream Tauri 2 + React + TypeScript application and visual language where source audit confirms suitability. CLI/runtime interfaces may complement desktop. Exact first-release packaging and feature scope remain validation items; mobile is a later exploration only.
 
 ### 2.2 Operational Runtime
 
@@ -43,7 +43,7 @@ Owns operational lifecycle and execution concerns:
 - Remote boxes or remote execution targets when supported by the chosen operational foundation.
 - Runtime health, logs, resource/process supervision, and upgrade compatibility.
 
-Shipyard upstream is an operational reference and candidate reuse foundation. The project must audit actual source, tests, APIs, license, security, platform support, and packaging before choosing API integration, plugin/adapter integration, selective reuse, or independent implementation. No fork, source copy, or mandatory dependency is presumed.
+Shipyard is the selected operational/workbench foundation. The project must audit actual source, tests, APIs, license, security, platform support, and packaging before choosing API integration, plugin/adapter integration, selective source reuse, or replacement of unsuitable components. The foundation decision is accepted; the per-capability integration mechanism remains open. No fork or wholesale source copy is presumed.
 
 ### 2.3 Engineering Intelligence
 
