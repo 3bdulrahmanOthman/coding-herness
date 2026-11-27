@@ -62,6 +62,8 @@ The canonical model should support:
 - Evidence/artifact outputs and observability.
 - Compatibility adapters for existing Shipyard flows; migration must be incremental and preserve existing behavior.
 
+The Operational Runtime owns the single durable execution substrate, authoritative workflow/run/task state, event journal, retries, cancellation, and recovery. Engineering Intelligence plans and selects workflows, supplies context and specialists, and evaluates evidence; it does not run a competing workflow engine. Governance authorizes transitions and side effects but is not another executor. Grafeo may retain derived task/run/evidence relationships, never the canonical live run state.
+
 Do not add an entirely new workflow service before auditing Shipyard's flow engine. First determine whether its current engine can host the canonical model or whether a narrow runtime extension is required. The visual builder is an editor, not a second executor.
 
 ## 5. Agent specifications and dynamic collaboration
