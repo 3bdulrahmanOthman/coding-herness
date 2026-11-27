@@ -17,7 +17,7 @@ Target capabilities:
 - Project architecture/dependency views and governed knowledge/memory review.
 - Extension management, provider/harness configuration, settings, diagnostics, logs, updates, and recovery.
 
-The first shipped surface (desktop, CLI, or both) remains open. Tauri 2 + React + TypeScript is a candidate desktop stack, not an accepted final choice. Mobile is a possible later companion, not a v1 commitment.
+The product direction is a Shipyard-derived desktop workbench, with a Windows desktop edition explicitly required. Preserve and extend the existing Tauri 2 + React + TypeScript application and UI language where source audit confirms suitability; this does not imply Windows readiness. CLI/runtime interfaces remain complementary, while exact first-release packaging and feature scope are finalized through platform validation. Mobile is not a v1 commitment.
 
 ## Operational Runtime
 
@@ -31,7 +31,7 @@ Target capabilities:
 - Remote boxes/execution targets where supported by the selected foundation.
 - Runtime health, logs, process supervision, and upgrade compatibility.
 
-The original Shipyard upstream is a candidate reuse foundation. Its actual implementation, APIs, tests, license, security, and platform support must be audited before choosing integration boundaries. Do not assume a fork or direct code reuse.
+Shipyard is the selected operational/workbench foundation. Its actual implementation, APIs, tests, license, security, and platform support must be audited before choosing how each capability is reused (API, plugin/adapter, selective source reuse, or replacement of a specific unsuitable component). The product decision is fixed; the code-integration mechanism is not. Coding Harness is not assumed to be a fork.
 
 ## Engineering Intelligence
 
