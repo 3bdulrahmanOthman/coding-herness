@@ -134,7 +134,7 @@ The end-to-end execution lifecycle, hierarchical delegation contracts, governanc
 The Workbench, Operational Runtime, Engineering Intelligence, harness adapters, SCM integration, and governance services retain distinct ownership. The orchestrator coordinates these boundaries; it does not replace durable runtime state, deterministic verification, or policy enforcement.
 
 
-## 10. Shipyard and AgenticOS integration boundary
+## 12. Shipyard and AgenticOS integration boundary
 
 Shipyard remains the operational/workbench foundation; AgenticOS is a capability and design-pattern reference. Adopt selected AgenticOS patterns through native contracts and existing product planes; do not import its full server backend. The detailed capability matrix, workflow architecture, Agent/Workflow Specs, extension tiers, language boundaries, Windows target, and UI integration rules are defined in [16-shipyard-agenticos-integration-plan.md](16-shipyard-agenticos-integration-plan.md).
 
