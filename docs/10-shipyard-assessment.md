@@ -101,7 +101,7 @@ Then write a reuse decision comparing:
 Do not call the current documentation inspection a full source audit.
 
 
-## 6. AgenticOS comparison and product direction
+## 8. AgenticOS comparison and product direction
 
 Shipyard is the chosen foundation for operational runtime and workbench UX. The exact per-capability code/API/plugin reuse strategy remains open pending the full audit. AgenticOS is not a replacement foundation; it is a reference for selected higher-level capabilities: versioned agent definitions, capability-based configuration, Skills/Context, Routines, visual workflows, approvals, budgets, audit, delegation, structured tables, and interactive Apps. Its full multi-tenant Python/FastAPI/PostgreSQL backend is not part of the target architecture.
 
