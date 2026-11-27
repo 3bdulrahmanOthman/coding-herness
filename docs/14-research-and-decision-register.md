@@ -13,7 +13,7 @@
 | Intelligence execution | Hybrid deterministic + model-based | Capability routing, evaluation, failure behavior |
 | Extensions | Unified Extensions Ecosystem | Manifest, permissions, lifecycle, compatibility, sandboxing |
 | Agent topology | Orchestrator with dynamically selected specialists | Capability registry, contracts, bounded delegation, evaluation |
-| Operational foundation | Evaluate original cosscom/shipyard for suitable operational reuse | Complete source/test/security/license/platform audit; reuse mechanism remains open |
+| Operational/workbench foundation | Shipyard is the selected product foundation | Complete source/test/security/license/platform audit; per-capability reuse mechanism remains open |
 
 ## 2. Data and knowledge architecture research
 
@@ -182,7 +182,7 @@ These concepts are target requirements for design/validation, not claims that an
 
 | Area | Direction | Remaining validation |
 |---|---|---|
-| Product foundation | Shipyard is the operational/workbench foundation | Source-level audit and selective reuse decisions |
+| Product foundation | Shipyard is the operational/workbench foundation | Source-level audit and per-capability selective reuse decisions |
 | AgenticOS | Adopt selected patterns/capabilities; do not import its full server backend | Feature-by-feature source audit and provenance |
 | Engineering Memory / Code Intelligence | First-class domains within Engineering Intelligence | Implement through the approved knowledge and indexing architecture; no parallel subsystem |
 | Workflow architecture | One canonical Workflow Spec and one durable execution substrate | Audit Shipyard flows; validate pause/resume, triggers, approvals, retries, migration |
