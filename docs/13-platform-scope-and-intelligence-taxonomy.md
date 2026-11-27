@@ -147,7 +147,7 @@ Every engineering claim should be traceable to evidence and a repository revisio
 ## 8. Explicitly open / research-only areas
 
 The following are not frozen decisions and must not be described as implemented or approved:
-- Exact first-release product surface (desktop, CLI, or both) and final UI framework.
+- Exact first-release desktop feature/package scope and which complementary CLI capabilities ship alongside it. The desktop workbench direction and Windows target are accepted; implementation details and release gates remain open.
 - Final Shipyard integration method and exact upstream revision/license implications.
 - Exact first-class coding harnesses and capability matrix.
 - Exact local/cloud model provider roster, routing policy, and model requirements.
