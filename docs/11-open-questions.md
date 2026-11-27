@@ -79,3 +79,16 @@ Before implementation decisions are frozen, define:
 ## Decision hygiene
 
 When a question is resolved, record the result in an ADR or the relevant architecture document. Do not quietly convert a proposed answer into an accepted decision.
+
+
+## 6. Decisions clarified by the Shipyard + AgenticOS integration plan
+
+The following are no longer open product-direction questions:
+- Shipyard is the operational/workbench foundation; AgenticOS is a source of selected patterns/capabilities, not a replacement foundation.
+- Engineering Memory and Code Intelligence are part of Engineering Intelligence, not separate parallel systems.
+- Windows desktop is an explicit product target; upstream Tauri usage does not establish readiness.
+- Preserve and extend Shipyard's current UI language.
+- Avoid two workflow engines: one canonical versioned Workflow Spec and one durable execution substrate must serve visual authoring, routines, Shipyard hooks/flows, CLI/API, and event triggers.
+- Use Go for validated operational runtime responsibilities, Rust for the Intelligence Sidecar/Grafeo and measured native workloads, and TypeScript/React for the workbench.
+
+Remaining technical questions are validation tasks, not unresolved product direction: Shipyard flow-engine reuse/migration, AgenticOS capability source audit, Workflow Spec semantics, extension sandbox tiers, Windows packaging/IPC/sidecar/update/recovery, and UI regression. See [16-shipyard-agenticos-integration-plan.md](16-shipyard-agenticos-integration-plan.md).
