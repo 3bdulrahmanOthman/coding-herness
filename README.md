@@ -48,7 +48,7 @@ The intelligence taxonomy is a set of logical capability domains, not a requirem
 | Intelligence execution | Hybrid: deterministic native capabilities plus model-based reasoning |
 | Extensions | Unified extensions ecosystem |
 | Agent topology | Orchestrator with dynamically selected specialist agents |
-| Operational foundation | Evaluate and reuse suitable original Shipyard capabilities; no assumption of a fork or mandatory dependency |
+| Operational/workbench foundation | Shipyard is the selected foundation; per-capability reuse method remains subject to source audit |
 
 See the ADRs for rationale, consequences, and validation requirements.
 
