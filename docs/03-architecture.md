@@ -86,7 +86,7 @@ Requirements:
 
 ## 6. State and storage boundaries
 
-SQLite stores application/system state such as local configuration, project registry, job/task metadata, user preferences, extension registry metadata, and migration bookkeeping.
+SQLite may store application/system metadata and, where the selected Operational Runtime implementation uses it, runtime-owned durable task/run metadata. Ownership remains with the Operational Runtime; Engineering Intelligence and Grafeo must not become competing sources of live execution state.
 
 Grafeo stores the derived engineering knowledge graph. SQLite is **not** a graph fallback. If Grafeo cannot start, ordinary project/session functions may continue where possible, but graph-dependent capabilities must report degraded/unavailable status.
 
