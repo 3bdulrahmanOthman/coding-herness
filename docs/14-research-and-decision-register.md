@@ -178,7 +178,7 @@ These concepts are target requirements for design/validation, not claims that an
 - End-to-end baseline tasks measuring quality, coordination overhead, false-success, recovery, and resource consumption.
 
 
-## 7. Additional accepted product direction: Shipyard + AgenticOS
+## 11. Additional accepted product direction: Shipyard + AgenticOS
 
 | Area | Direction | Remaining validation |
 |---|---|---|
