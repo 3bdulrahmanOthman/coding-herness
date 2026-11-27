@@ -46,7 +46,7 @@ These are meaningful existing operational capabilities. Coding Harness should av
 
 ## 4. Candidate reuse boundaries
 
-Potentially reusable through integration or adapters:
+Potentially reusable through integration or adapters (the product foundation is selected; the reuse mechanism for each capability is still to be validated):
 - worktree and project lifecycle;
 - session and agent process lifecycle;
 - execution and test command infrastructure;
@@ -103,7 +103,7 @@ Do not call the current documentation inspection a full source audit.
 
 ## 6. AgenticOS comparison and product direction
 
-Shipyard remains the chosen foundation for operational runtime and workbench UX. AgenticOS is not a replacement foundation; it is a reference for selected higher-level capabilities: versioned agent definitions, capability-based configuration, Skills/Context, Routines, visual workflows, approvals, budgets, audit, delegation, structured tables, and interactive Apps. Its full multi-tenant Python/FastAPI/PostgreSQL backend is not part of the target architecture.
+Shipyard is the chosen foundation for operational runtime and workbench UX. The exact per-capability code/API/plugin reuse strategy remains open pending the full audit. AgenticOS is not a replacement foundation; it is a reference for selected higher-level capabilities: versioned agent definitions, capability-based configuration, Skills/Context, Routines, visual workflows, approvals, budgets, audit, delegation, structured tables, and interactive Apps. Its full multi-tenant Python/FastAPI/PostgreSQL backend is not part of the target architecture.
 
 The product will preserve Shipyard's current UI language and extend its navigation and surfaces. A Windows desktop edition is a committed product target, but current upstream Tauri usage does not prove Windows readiness; a dedicated porting and release validation track is required.
 
