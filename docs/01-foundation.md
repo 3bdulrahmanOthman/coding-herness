@@ -141,3 +141,8 @@ No numeric performance target is frozen until representative workloads and basel
 ## 10. Product maturity
 
 The current state is **foundation/documentation and validation planning**. Runtime implementation has not started. Any capability described in future tense or as a requirement is not implemented unless a later implementation record explicitly says otherwise.
+
+
+## Product foundation update — upstreams and Windows
+
+The product foundation is clarified as follows: Shipyard is the operational/workbench foundation; AgenticOS contributes selected capabilities and design patterns, not its complete server backend. A Windows desktop edition is an explicit product target and must be implemented and validated rather than assumed ready because the upstream uses Tauri. Preserve Shipyard's existing UI language. Engineering Memory and Code Intelligence remain first-class Engineering Intelligence domains. See [the integration plan](16-shipyard-agenticos-integration-plan.md).
