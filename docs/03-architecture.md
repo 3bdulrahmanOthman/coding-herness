@@ -38,13 +38,13 @@ This is a target architecture, not a claim that processes or interfaces already 
 
 The workbench is the user-facing control and review surface for projects, workspaces, sessions, tasks, plans, agent activity, tools, permissions, diffs, evidence, settings, and diagnostics. It should consume stable runtime and intelligence APIs rather than embedding domain logic in the UI.
 
-The first usable surface (desktop, CLI, or both) remains open. Tauri 2 + React + TypeScript is a candidate desktop approach informed by the Shipyard ecosystem, not a final approved stack decision. Mobile is not a v1 assumption.
+The approved product direction is a Shipyard-derived desktop workbench, including an explicitly supported Windows edition. Preserve and extend the upstream Tauri 2 + React + TypeScript application where validated; Windows readiness must be demonstrated independently. CLI/runtime interfaces may complement the desktop app. Exact first-release packaging and feature scope remain validation items. Mobile is not a v1 assumption.
 
 ## 3. Operational runtime
 
 The operational runtime owns process-oriented concerns: project/workspace/worktree lifecycle, sessions, terminals, agent process control, task execution, remote boxes, durable operational events, artifacts, hooks, and flows.
 
-The original Shipyard upstream is a candidate foundation. Inspect source, tests, APIs, security, licensing, packaging, and OS support before selecting API integration, plugin/adapter integration, selective reuse, or independent implementation. Avoid rewriting mature operational functionality without a measured reason.
+Shipyard is the selected operational/workbench foundation. Inspect source, tests, APIs, security, licensing, packaging, and OS support before selecting API integration, plugin/adapter integration, selective source reuse, or replacement of an unsuitable component. The foundation decision is accepted; the per-capability reuse mechanism remains open. Avoid rewriting mature operational functionality without a measured reason.
 
 ## 4. Rust Intelligence Sidecar
 
@@ -113,7 +113,7 @@ Never copy a live database or WAL files as a backup unless the engine documents 
 
 ## 9. Packaging and platforms
 
-The long-term desktop target is Windows, macOS, and Linux. Validate UI packaging, signing, runtime/sidecar binaries, process supervision, filesystem permissions, IPC, updates, and recovery separately per OS. Tauri/React remains a candidate, not a frozen decision.
+The desktop product target is Windows, with macOS and Linux retained as additional platform targets to validate. The Shipyard Tauri 2 + React + TypeScript workbench is the selected starting UI foundation, subject to source and platform audit. Validate UI packaging, signing, runtime/sidecar binaries, process supervision, filesystem permissions, IPC, updates, and recovery separately per OS.
 
 Do not assume a desktop binary can be reused unchanged on iOS or Android. Mobile is a future companion surface requiring separate product and platform design.
 
