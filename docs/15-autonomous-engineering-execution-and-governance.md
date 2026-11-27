@@ -95,14 +95,14 @@ Keep the following responsibilities distinct:
 | Concern | Owner |
 |---|---|
 | Task interpretation, decomposition, specialist choice, engineering contracts | Engineering Intelligence |
-| Durable run state, agent process/session lifecycle, worktrees, commands, events, retries, cancellation | Operational Runtime |
+| Durable run/task/workflow state, agent process/session lifecycle, worktrees, commands, event journal, retries, cancellation, recovery | Operational Runtime |
 | Permissions, invariants, transition gates, autonomy, budgets, approval policy | Governance/policy services, shared across planes |
 | Plans, status, delegation tree, approvals, diffs, evidence, diagnostics | Developer Workbench |
 | Agent loop, prompt/tool execution, provider-specific features | Selected coding-harness adapter |
 | Pull-request and CI operations | SCM/GitHub integration adapter under runtime permissions |
 | Final acceptance decision | Policy gates plus authorized human approval where required |
 
-The orchestrator coordinates but does not replace runtime durability, deterministic verification, or policy enforcement.
+The orchestrator coordinates but does not own the durable execution database or process lifecycle. The Operational Runtime is the source of truth for workflow/run/task state and event history. Engineering Intelligence may store derived graph references, evidence links, and outcome summaries, but never a competing live execution state. Governance/policy services authorize transitions and side effects; they do not become a second workflow executor.
 
 ## 7. External systems researched—not preselected
 
