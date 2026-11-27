@@ -95,7 +95,7 @@ Memory is a governed knowledge lifecycle, not a transcript dump.
 
 ### Storage boundaries
 - Grafeo is the sole graph engine, owned by the Rust Intelligence Sidecar. No graph fallback.
-- SQLite stores application/system state only (project registry, settings, jobs, migration bookkeeping, task metadata, extension registry metadata); it is not a graph fallback.
+- SQLite stores application/system state only (project registry, settings, local preferences, extension registry metadata, and migration bookkeeping); it is not a graph fallback. Durable operational task/run state belongs to the Operational Runtime's authoritative store, not to Engineering Memory or Grafeo.
 - Source repositories and Git remain authoritative. Derived graph/index/memory records must be rebuildable where possible.
 - Store large raw artifacts as files/object artifacts with stable references and hashes, not wholesale graph properties.
 
@@ -103,7 +103,7 @@ Memory is a governed knowledge lifecycle, not a transcript dump.
 
 Use Grafeo to represent meaningful engineering entities and typed relationships, not every token or line. Graph Schema v1 must be driven by actual retrieval, impact-analysis, traceability, and verification queries.
 
-Candidate entities: Project, Repository, Worktree, Revision, Directory, File, Package, Module, Symbol, Type, Function, Method, API, Endpoint, DataEntity, ConfigKey, Dependency, Requirement, Constraint, Convention, ArchitectureComponent, ArchitectureDecision, Test, Build, DeploymentUnit, ExternalService, KnowledgeClaim, Evidence, Task, AgentRun, ToolExecution, Finding, VerificationResult.
+Candidate entities: Project, Repository, Worktree, Revision, Directory, File, Package, Module, Symbol, Type, Function, Method, API, Endpoint, DataEntity, ConfigKey, Dependency, Requirement, Constraint, Convention, ArchitectureComponent, ArchitectureDecision, Test, Build, DeploymentUnit, ExternalService, KnowledgeClaim, Evidence, Task, AgentRun, ToolExecution, Finding, VerificationResult. Task/AgentRun/ToolExecution graph records are derived knowledge/evidence references only; the Operational Runtime remains authoritative for live task state, run state, process state, event journal, retries, and execution artifacts.
 
 Candidate relationships: CONTAINS, DEFINES, IMPORTS, CALLS, EXTENDS, IMPLEMENTS, DEPENDS_ON, EXPOSES, READS, WRITES, CONFIGURES, TESTS, COVERS, DOCUMENTS, REFERENCES, AFFECTS, INTRODUCES, REMOVES, SUPPORTED_BY, CONTRADICTS, SUPERSEDES, INVALIDATES, PRODUCED_BY, VERIFIED_BY.
 
@@ -225,7 +225,7 @@ Technical validation establishes Shipyard reuse boundaries, Grafeo behavior, IPC
 
 This document specifies the Engineering Intelligence plane, not the entirety of Coding Harness. The overall product also includes a Developer Workbench and an Operational Runtime. Their responsibilities, end-to-end user workflow, and the 22 logical intelligence domains are defined in [docs/13-platform-scope-and-intelligence-taxonomy.md](13-platform-scope-and-intelligence-taxonomy.md). The research questions and technology alternatives are tracked in [docs/14-research-and-decision-register.md](14-research-and-decision-register.md).
 
-The intelligence domains are logical capability boundaries. They do not imply one process, microservice, or autonomous agent per domain. Runtime process/session execution remains owned by the Operational Runtime; the intelligence sidecar supplies project understanding, knowledge, retrieval, reasoning support, and evidence services through versioned contracts.
+The intelligence domains are logical capability boundaries. They do not imply one process, microservice, or autonomous agent per domain. Runtime process/session execution and authoritative durable task/run state remain owned by the Operational Runtime; the intelligence sidecar supplies project understanding, governed knowledge, retrieval, reasoning support, and evidence services through versioned contracts.
 
 ## 21. Cross-cutting intelligence mechanisms and graph views
 
