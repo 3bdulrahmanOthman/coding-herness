@@ -25,6 +25,7 @@ It is not merely an Engineering Intelligence library, a prompt/skill bundle, an 
 - [Open technical questions](docs/11-open-questions.md)
 - [Shipyard upstream assessment](docs/10-shipyard-assessment.md)
 - [Architecture decision records](docs/adr/README.md)
+- [Cross-document consistency audit](docs/17-cross-document-consistency-audit.md)
 
 ## Product planes
 
