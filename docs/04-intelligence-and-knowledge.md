@@ -19,7 +19,7 @@ Grafeo is pre-1.0 software at the time of this foundation. Pin the exact release
 ## 3. System state versus project knowledge
 
 ### SQLite
-Use SQLite for application/system state: configuration, local project registry, job metadata, user preferences, migration bookkeeping, and other transactional state that does not require graph traversal.
+Use SQLite for application/system state and transactional metadata. It may back Operational Runtime persistence where that runtime owns the schema and lifecycle, but Engineering Intelligence must not treat it as its own live task/run store or graph fallback.
 
 ### Grafeo
 Use Grafeo for engineering entities and relationships: modules, symbols, dependencies, requirements, decisions, tests, APIs, and evidence links.
