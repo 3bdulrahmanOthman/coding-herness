@@ -81,7 +81,7 @@ Before implementation decisions are frozen, define:
 When a question is resolved, record the result in an ADR or the relevant architecture document. Do not quietly convert a proposed answer into an accepted decision.
 
 
-## 6. Decisions clarified by the Shipyard + AgenticOS integration plan
+## J. Decisions clarified by the Shipyard + AgenticOS integration plan
 
 The following are no longer open product-direction questions:
 - Shipyard is the operational/workbench foundation; AgenticOS is a source of selected patterns/capabilities, not a replacement foundation.
