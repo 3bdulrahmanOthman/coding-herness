@@ -58,7 +58,7 @@ Do not publish performance claims based solely on vendor benchmarks. Record hard
 ## 6. SQLite system state
 
 - Define schema, migrations, transactions, and backup policy.
-- Store system metadata only; do not implement a hidden graph fallback.
+- Store application/system metadata; the Operational Runtime may also use SQLite for its own durable task/run metadata only if the Shipyard/runtime audit validates that choice. Runtime ownership and schema boundaries must remain explicit. Never implement a hidden graph fallback.
 - Maintain explicit references to graph database identity and status.
 - Handle sidecar/graph unavailable state without corrupting system state.
 
