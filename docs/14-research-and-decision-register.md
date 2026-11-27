@@ -143,7 +143,7 @@ Prior discussions explored a target system that can coordinate a complete featur
 
 - **DeepSeek Harness (DSH):** prior discussion described Subagent/Workflow primitives (parallel, pipeline, phase, nested delegation, lifecycle controls, JavaScript customization). Verify exact upstream release and API. Do not assume durable resume, worktree isolation, retry/recovery, independent review gates, GitHub PR/CI lifecycle, or global budgets are complete.
 - **Sandcastle:** previously discussed as a TypeScript orchestration library for isolated agent runs, branches/worktrees, parallel tasks, testing/review, retries, and merge workflows. Treat as a candidate, not a dependency or accepted architecture decision.
-- **Shipyard:** separate operational foundation candidate already covered by the source-audit issue; avoid conflating its process/workspace lifecycle with engineering intelligence.
+- **Shipyard:** selected operational/workbench foundation; its exact API/plugin/source-reuse boundaries remain subject to the source-audit issue. Do not conflate its process/workspace lifecycle with Engineering Intelligence.
 - **Codex and Claude Code:** evaluate as harness adapters with capability discovery, not as equivalent runtimes.
 
 ### 10.2 Governance and workflow concepts carried forward
